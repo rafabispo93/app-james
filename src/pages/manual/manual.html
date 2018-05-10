@@ -1,0 +1,34 @@
+<!--
+  Generated template for the ManualPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Manual Mode</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content class="manual" padding>
+  <ion-item>
+    <ion-list>
+      <ion-list-header>
+        Frequência:
+        <ion-badge item-end color="danger">{{warmth}}</ion-badge>
+      </ion-list-header>
+      <ion-item>
+        <ion-range min="30" max="200" step="20" snaps="true" [(ngModel)]="warmth" color="danger">
+        </ion-range>
+      </ion-item>
+    </ion-list>
+  </ion-item>
+  <ion-item>
+    <ion-grid id="grid-home" center text-center>
+      <ion-row>
+        <ion-col *ngFor="let patology of patologies"><button ion-button (click)="sendRitmoValue(patology.value)" class="buttons-manual" large block>{{patology.name}}</button></ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-content>

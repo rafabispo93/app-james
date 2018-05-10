@@ -1,0 +1,50 @@
+<!--
+  Generated template for the VisualizationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Atividade</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content text-center padding>
+  <p >{{currentRitmo}}</p>
+
+  <div  *ngIf=" user == 'aluno'">
+    <ion-item>
+      <ion-label>Qual o tratamento ?</ion-label>
+      <ion-select [(ngModel)]="model_procedures">
+        <ion-option value="Teste1" selected="true">Teste 1</ion-option>
+        <ion-option value="Teste2">Teste 2</ion-option>
+      </ion-select>
+    </ion-item>
+  </div>
+  <div  *ngIf=" user == 'aluno'">
+    <ion-item>
+      <ion-label>Qual ritmo cardíaco atual ?</ion-label>
+      <ion-select [(ngModel)]="model_patologies">
+        <ion-option *ngFor="let patology of patologies" value={{patology.name}} >{{patology.name}}</ion-option>
+      </ion-select>
+    </ion-item>
+  </div>
+  <div  *ngIf=" user == 'instrutor'">
+    <label>Resposta</label>
+    <button class="answer-button" (click)='checkAnswer()'  primary block ion-button> Ver Resposta</button>
+    <p id="response-from-aluno">{{responseAluno}}</p>
+  </div>
+  <div *ngIf=" user == 'aluno'">
+    <ion-grid id="grid-home" center text-center>
+      <ion-row>
+        <ion-col *ngFor="let patology of patologies"><a (click)="setRitmoValue(patology.name)" class="buttons-manual" block>{{patology.name}}</a></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <br><br>
+  <button class="answer-button" *ngIf=" user == 'aluno'" id='generate-flux' (click)='toAnswer()'  primary block ion-button> Responder</button>
+</ion-content>

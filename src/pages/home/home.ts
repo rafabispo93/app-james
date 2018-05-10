@@ -1,14 +1,29 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
+import {ModalLoginPage} from '../modal-login/modal-login';
+import {VisualizationPage} from '../visualization/visualization';
+
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+  serverIP = 'http://10.220.17.34:5000';
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
 
-  constructor(public navCtrl: NavController) {
+  }
 
+  openModal(login) {
+   let myModal = this.modalCtrl.create(ModalLoginPage, {'login':login});
+   myModal.present();
+  }
+
+  navigateToVisualizationPage(username) {
+    this.navCtrl.push(VisualizationPage, {
+      serverIp: this.serverIP,
+      user: username
+    });
   }
 
 }

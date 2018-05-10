@@ -1,0 +1,25 @@
+<!--
+  Generated template for the ModalLoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item class="password text-center">
+    <ion-label floating>Password</ion-label>
+    <ion-input [(ngModel)]="password"  type="password" value=""></ion-input>
+  </ion-item>
+  <div padding>
+    <button primary block ion-button (click)="login()">Sign In</button>
+    <button primary block ion-button class="close-modal" (click)="closeModal()">Fechar</button>
+  </div>
+</ion-content>

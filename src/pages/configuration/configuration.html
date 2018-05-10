@@ -1,0 +1,31 @@
+<!--
+  Generated template for the ConfigurationPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Automatic Mode</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content class="configuration" padding>
+  <ion-item>
+    <ion-input type="number" id="niveis" [(ngModel)]="level_number" placeholder="Quantidades de níveis"></ion-input>
+    <button ion-button type="submit" (click)="generateLevels()" large item-right>OK</button>
+  </ion-item>
+  <div id="sequence">
+    <ion-item *ngFor="let level of level_qt">
+      <ion-select placeholder="Patologia{{level}}" [(ngModel)]="model_patologies[level]">
+        <ion-option *ngFor="let patology of patologies" value={{patology.value}} >{{patology.name}}</ion-option>
+      </ion-select>
+      <ion-select placeholder="Procedimento" [(ngModel)]="model_procedures[level]">
+        <ion-option value="f">Teste 1</ion-option>
+        <ion-option value="m">Teste 2</ion-option>
+      </ion-select>
+    </ion-item>
+  </div>
+  <button id='generate-flux' (click)='generate()' primary block ion-button>Generate</button>
+</ion-content>

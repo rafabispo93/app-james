@@ -1,14 +1,24 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
+    <ion-title text-center>
+      Algetec
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="home"  responsive-sm>
+  <ion-list text-center>
+    <!-- <ion-col width-67>
+      <img src="../assets/imgs/logo.png"/>
+    </ion-col> -->
+  <div padding>
+    <button id="instrutor-login" (click)="openModal('instrutor')" primary block ion-button>Instrutor</button>
+  </div>
+  <div padding>
+    <button id="aluno-login" (click)="openModal('aluno')" primary block ion-button>Aluno</button>
+  </div>
+  <div padding>
+    <button id="ouvinte-login" (click)="navigateToVisualizationPage('ouvinte')" primary block ion-button>Ouvinte</button>
+  </div>
+</ion-list>
 </ion-content>
