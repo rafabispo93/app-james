@@ -20,7 +20,7 @@ export class ModalLoginPage {
   mainPage = MainPage;
   username = this.navParams.get('login');
   data: any;
-  serverIP = 'http://10.220.17.34:5000';
+  serverIP = 'http://10.220.17.3:5000';
   constructor(public navCtrl: NavController, public navParams: NavParams, public viewCtrl: ViewController, public httpClient: HttpClient, public toastCtrl: ToastController) {
     console.log(this.username);
   }

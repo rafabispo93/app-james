@@ -10,6 +10,7 @@ import {ManagementPage} from '../pages/management/management';
 import {ManagementRitmosPage} from '../pages/management-ritmos/management-ritmos';
 import {ModalLoginPage} from '../pages/modal-login/modal-login';
 import {VisualizationPage} from '../pages/visualization/visualization';
+import {CompressionPage} from '../pages/compression/compression';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -25,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     ManagementPage,
     ManagementRitmosPage,
     ModalLoginPage,
-    VisualizationPage
+    VisualizationPage,
+    CompressionPage
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,8 @@ import { HttpClientModule } from '@angular/common/http';
     ManagementPage,
     ManagementRitmosPage,
     ModalLoginPage,
-    VisualizationPage
+    VisualizationPage,
+    CompressionPage
   ],
   providers: [
     StatusBar,

@@ -9,7 +9,7 @@ import {VisualizationPage} from '../visualization/visualization';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  serverIP = 'http://10.220.17.34:5000';
+  serverIP = 'http://10.220.17.3:5000';
   constructor(public navCtrl: NavController, public modalCtrl: ModalController) {
 
   }

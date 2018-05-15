@@ -4,6 +4,7 @@ import {ConfigurationPage} from '../configuration/configuration';
 import {ManualPage} from '../manual/manual';
 import {ManagementPage} from '../management/management';
 import {VisualizationPage} from '../visualization/visualization';
+import {CompressionPage} from '../compression/compression';
 /**
  * Generated class for the MainPage page.
  *
@@ -20,6 +21,7 @@ export class MainPage {
   configurationPage = ConfigurationPage;
   manualPage = ManualPage;
   managementPage = ManagementPage;
+  compressionPage = CompressionPage;
   serverIp = this.navParams.get("serverIp");
   user = this.navParams.get("user");
   constructor(public navCtrl: NavController, public navParams: NavParams) {
@@ -47,6 +49,13 @@ export class MainPage {
   }
   navigateToVisualizationPage() {
     this.navCtrl.push(VisualizationPage, {
+      serverIp: this.serverIp,
+      user: this.user
+    });
+  }
+
+  navigateToCompressionPage() {
+    this.navCtrl.push(CompressionPage, {
       serverIp: this.serverIp,
       user: this.user
     });
