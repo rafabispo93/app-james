@@ -11,7 +11,7 @@ import {ManagementRitmosPage} from '../pages/management-ritmos/management-ritmos
 import {ModalLoginPage} from '../pages/modal-login/modal-login';
 import {VisualizationPage} from '../pages/visualization/visualization';
 import {CompressionPage} from '../pages/compression/compression';
-
+import { ChartsModule } from 'ng2-charts';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { HttpClientModule } from '@angular/common/http';
@@ -32,6 +32,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     HttpClientModule,
+    ChartsModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

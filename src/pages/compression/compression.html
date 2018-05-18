@@ -15,4 +15,19 @@
 
 <ion-content padding>
   <h1 text-center> Frequência: {{compressionFreq}}</h1>
+  <!-- <div text-center class="row">
+    <div class="col-md-6">
+      <div style="display: block;"> -->
+        <canvas baseChart text-center width="100%" height="30%"
+                    [datasets]="lineChartData"
+                    [labels]="lineChartLabels"
+                    [options]="lineChartOptions"
+                    [colors]="lineChartColors"
+                    [legend]="lineChartLegend"
+                    [chartType]="lineChartType"
+                    (chartHover)="chartHovered($event)"
+                    (chartClick)="chartClicked($event)"></canvas>
+      <!-- </div>
+    </div>
+  </div> -->
 </ion-content>
