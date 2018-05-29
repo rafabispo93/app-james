@@ -14,6 +14,7 @@ import {CompressionPage} from '../pages/compression/compression';
 import { ChartsModule } from 'ng2-charts';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { DebuggerPage } from '../pages/debugger/debugger';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -27,7 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
     ManagementRitmosPage,
     ModalLoginPage,
     VisualizationPage,
-    CompressionPage
+    CompressionPage,
+    DebuggerPage
   ],
   imports: [
     BrowserModule,
@@ -46,7 +48,8 @@ import { HttpClientModule } from '@angular/common/http';
     ManagementRitmosPage,
     ModalLoginPage,
     VisualizationPage,
-    CompressionPage
+    CompressionPage,
+    DebuggerPage
   ],
   providers: [
     StatusBar,

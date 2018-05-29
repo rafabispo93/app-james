@@ -5,6 +5,7 @@ import {ManualPage} from '../manual/manual';
 import {ManagementPage} from '../management/management';
 import {VisualizationPage} from '../visualization/visualization';
 import {CompressionPage} from '../compression/compression';
+import {DebuggerPage} from '../debugger/debugger';
 /**
  * Generated class for the MainPage page.
  *
@@ -56,6 +57,13 @@ export class MainPage {
 
   navigateToCompressionPage() {
     this.navCtrl.push(CompressionPage, {
+      serverIp: this.serverIp,
+      user: this.user
+    });
+  }
+
+  navigateToDebuggerPage() {
+    this.navCtrl.push(DebuggerPage, {
       serverIp: this.serverIp,
       user: this.user
     });
