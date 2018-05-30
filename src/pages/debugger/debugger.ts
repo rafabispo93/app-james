@@ -28,10 +28,15 @@ export class DebuggerPage {
 
   loadDebugger() {
     this.data = this.httpClient.get(this.serverIp + '/get/debug_values');
+    let length;
     this.data.subscribe(data => {
-      this.values = Object.keys(data.values);
+      length = Object.keys(data.values).length;
+      let auxArray:Array<any> = new Array(length);
+      for(let counter = 0; counter < length; counter++){
+        auxArray[counter] = data.values[counter];
+      }
+      this.values = auxArray;
       this.loadDebugger();
-      // console.log(data.values);
     });
   }
 

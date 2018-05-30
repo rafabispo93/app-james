@@ -1,22 +1,22 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <ion-title text-center>
       Algetec
     </ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content class="main" responsive-sm>
   <ion-item class="main-grid">
     <ion-grid id="grid-home" center text-center>
-      <ion-row *ngIf=" user == 'instrutor'">
-        <ion-col col-6><button ion-button (click)="navigateToAutomaticPage()" class="buttons-home" large ion-button block>Automático</button></ion-col>
-        <ion-col col-6><button ion-button (click)="navigateToManualPage()" class="buttons-home" large ion-button block>Manual</button></ion-col>
+      <ion-row id="first-row" *ngIf=" user == 'instrutor'">
+        <ion-col col-6><button block ion-button (click)="navigateToAutomaticPage()" class="buttons-home" large ion-button block>Automático</button></ion-col>
+        <ion-col col-6><button block ion-button (click)="navigateToManualPage()" class="buttons-home" large ion-button block>Manual</button></ion-col>
       </ion-row>
-      <ion-row >
-        <ion-col col-6><button ion-button (click)="navigateToVisualizationPage()" class="buttons-home" large ion-button block >Visualização</button></ion-col>
-        <ion-col col-6><button ion-button (click)="navigateToCompressionPage()" class="buttons-home" large ion-button block>Compressão Cardíaca</button></ion-col>
-        <ion-col col-6><button ion-button (click)="navigateToDebuggerPage()" class="buttons-home" large ion-button block >Debugger</button></ion-col>
+      <ion-row id="second-row">
+        <ion-col col-6><button block ion-button (click)="navigateToVisualizationPage()" class="buttons-home" large ion-button block >Visualização</button></ion-col>
+        <ion-col col-6><button block ion-button (click)="navigateToCompressionPage()" class="buttons-home" large ion-button block>Compressão</button></ion-col>
+        <ion-col col-6 *ngIf=" user == 'desenvolvedor'"><button block ion-button (click)="navigateToDebuggerPage()" class="buttons-home" large ion-button block >Debugger</button></ion-col>
       </ion-row>
     </ion-grid>
   </ion-item>

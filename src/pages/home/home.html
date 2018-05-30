@@ -1,27 +1,27 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <ion-title text-center>
       Algetec
     </ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
 <ion-content class="home"  responsive-sm>
-  <ion-list text-center>
-    <!-- <ion-col width-67>
-      <img src="../assets/imgs/logo.png"/>
-    </ion-col> -->
-  <div padding>
-    <button id="instrutor-login" (click)="openModal('instrutor')" primary block ion-button>Instrutor</button>
-  </div>
-  <div padding>
-    <button id="aluno-login" (click)="openModal('aluno')" primary block ion-button>Aluno</button>
-  </div>
-  <div padding>
-    <button id="ouvinte-login" (click)="navigateToVisualizationPage('ouvinte')" primary block ion-button>Ouvinte</button>
-  </div>
-  <div padding>
-    <button id="desenvolvedor-login"  (click)="openModal('desenvolvedor')" primary block ion-button>Desenvolvedor</button>
-  </div>
-</ion-list>
+  <ion-list inset text-center>
+    <ion-col width-67>
+      <img src="assets/imgs/logo.png"/>
+    </ion-col>
+    <div padding>
+      <button id="instrutor-login" (click)="openModal('instrutor')" primary block ion-button>Instrutor</button>
+    </div>
+    <div padding>
+      <button id="aluno-login" (click)="openModal('aluno')" primary block ion-button>Aluno</button>
+    </div>
+    <div padding>
+      <button id="ouvinte-login" (click)="navigateToVisualizationPage('ouvinte')" primary block ion-button>Ouvinte</button>
+    </div>
+    <div padding>
+      <button id="desenvolvedor-login"  (click)="openModal('desenvolvedor')" primary block ion-button>Desenvolvedor</button>
+    </div>
+  </ion-list>
 </ion-content>

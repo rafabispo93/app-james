@@ -4,18 +4,29 @@ page-main {
 
 #grid-home {
   height: 100%;
+  widows: 100%;
   text-align: center;
   justify-content: center;
 }
 
 .buttons-home {
-  height:300px;
+  height:100%;
+  width:100%;
 }
 
 .main {
   background: linear-gradient(-87deg, white, #74b9ff);
+  height:100%;
+  width:100%;
 }
 
 .main-grid {
   background: linear-gradient(-87deg, white, #74b9ff);
+  height:100%;
+  width:100%;
+}
+
+#first-row {
+  height: 100%;
+  width: 100%;
 }
