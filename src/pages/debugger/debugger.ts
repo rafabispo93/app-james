@@ -18,7 +18,9 @@ export class DebuggerPage {
   data : any;
   serverIp = this.navParams.get("serverIp");
   values : any;
+  pageLoaded: boolean;
   constructor(public navCtrl: NavController, public navParams: NavParams, public httpClient: HttpClient) {
+    this.pageLoaded = true;
   }
 
   ionViewDidLoad() {
@@ -36,7 +38,9 @@ export class DebuggerPage {
         auxArray[counter] = data.values[counter];
       }
       this.values = auxArray;
-      this.loadDebugger();
+      if (this.pageLoaded === true) {
+        this.loadDebugger();
+      }
     });
   }
 

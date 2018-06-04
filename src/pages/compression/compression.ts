@@ -18,8 +18,9 @@ export class CompressionPage {
   compressionFreq : number = 0;
   data : any;
   serverIp = this.navParams.get("serverIp");
+  pageLoaded: boolean;
   constructor(public navCtrl: NavController, public navParams: NavParams, public httpClient: HttpClient) {
-
+    this.pageLoaded = true;
   }
 
   public lineChartData:Array<any> = [
@@ -77,6 +78,11 @@ export class CompressionPage {
     }
     this.lineChartData = _lineChartData;
   }
+
+  ionViewDidLeave() {
+    console.log("I Left!");
+    this.pageLoaded = false;
+  }
   
   // events
   public chartClicked(e:any):void {
@@ -105,7 +111,9 @@ export class CompressionPage {
       this.randomize(data.value);
       // _lineChartData = data.value;
       // this.lineChartData[0].data = _lineChartData;
-      this.loadCompression()
+      if (this.pageLoaded === true) {
+        this.loadCompression()
+      }
       // setInterval(() => this.loadCompression(), 500);
     })
   }
