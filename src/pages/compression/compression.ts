@@ -62,12 +62,6 @@ export class CompressionPage {
   public lineChartType:string = 'line';
   
   public randomize(value):void {
-    // let _lineChartData:Array<any> = [];
-    // for(let count = 0; count < 10; count++) {
-    //   _lineChartData.push(count); 
-    // }
-    // this.lineChartData[0].data = _lineChartData;
-    // console.log(this.lineChartData);
     let _lineChartData:Array<any> = new Array(this.lineChartData.length);
     for (let i = 0; i < this.lineChartData.length; i++) {
       _lineChartData[i] = {data: new Array(this.lineChartData[i].data.length), label: this.lineChartData[i].label};
